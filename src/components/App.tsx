@@ -12,14 +12,7 @@ function App() {
           <code>src/App.tsx</code>
           &nbsp;and save to reload.
         </p>
-        <a
-          className={styles.appLink}
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <a className={styles.appLink} href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
       </header>
     </div>
   );

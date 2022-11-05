@@ -10,4 +10,6 @@ module.exports = {
     'airbnb',
     'airbnb-typescript',
   ],
+  rules: {
+  }
 };
