@@ -19,9 +19,11 @@ export default function Hello() {
     newPerson.set('email', 'john@back4app.com');
 
     try {
+      const result1 = await Parse.Object.saveAll([newPerson]);
+      console.log(result1);
       // save it on Back4App Data Store
-      const result = await newPerson.saveEventually();
-      console.log(result);
+      const result2 = await newPerson.save();
+      console.log(result2);
     } catch (error) {
       console.error('Error saving new person: ', error);
     }
