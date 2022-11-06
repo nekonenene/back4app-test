@@ -7,7 +7,7 @@ import {
 
 export default function Hello() {
   return (
-    <Box>
+    <Box sx={{ p: 2 }}>
       <Container maxWidth="lg">
         <Typography variant="body1" component="div" sx={{ flexGrow: 1 }}>
           Hello, World!
