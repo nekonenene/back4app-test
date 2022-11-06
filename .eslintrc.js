@@ -11,5 +11,8 @@ module.exports = {
     'airbnb-typescript',
   ],
   rules: {
+    'object-curly-newline': 'warn',
+    '@typescript-eslint/comma-dangle': 'warn',
+    '@typescript-eslint/no-unused-vars': 'warn',
   }
 };

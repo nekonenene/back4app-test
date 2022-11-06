@@ -1,0 +1,13 @@
+.homeIcon {
+  color: white;
+}
+
+main.content {
+  flex-grow: 1;
+  height: calc(100vh - 56px);
+  overflow: auto;
+
+  @media (min-width: 600px) {
+    height: calc(100vh - 64px);
+  }
+}

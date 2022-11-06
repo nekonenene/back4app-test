@@ -1,24 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from 'react-router-dom';
 import App from './components/App';
+import Hello from './components/Hello';
+import Layout from './components/Layout';
 import reportWebVitals from './reportWebVitals';
+
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-  },
-  {
-    path: '/hello',
-    element: <div>Hello World!</div>,
-  },
-]);
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Layout />}>
+      <Route index element={<App />} />
+      <Route path="hello" element={<Hello />} />
+    </Route>,
+  ),
+);
 
 root.render(
   <React.StrictMode>
